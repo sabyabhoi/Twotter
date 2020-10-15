@@ -1,15 +1,25 @@
 <template>
 <div id="app">
-  Hello there
+{{ user.username }}
 </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
   name: 'App',
-  components: {
+  data() {
+    return {
+      followers: 0,
+      user: {
+        id: 1,
+        username: 'sabyabhoi',
+        firstName: 'Sabyasachi',
+        lastName: 'Bhoi',
+        email: 'sabyabhoi@gmail.com',
+        isAdmin: true
+      }
+    }
   }
 }
 </script>
